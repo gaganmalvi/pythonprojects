@@ -1,0 +1,11 @@
+#Database Creator
+c = p.connect(host = 'localhost', user = 'root', password = 'root')
+a = c.cursor()
+a.execute('create database college;')
+a.execute('use college;')
+a.execute('create table student (rno integer,name varchar(40), marks integer);')
+a.execute('insert into student values(1,"Riya",56);')
+a.execute('insert into student values(2,"Madhav",72);')
+a.execute('insert into student values(3,"Zara",97);')
+c.commit()
+print('Installed successfully!')
